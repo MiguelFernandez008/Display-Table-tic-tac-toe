@@ -1,3 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Display table Tic Tac Toe
 
-## Available Scripts
+A version of the Tic Tac Toe done in React
