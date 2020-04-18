@@ -1,0 +1,22 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+  background-color: #8B85C1;
+}
+.App {
+  header {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #7A6F9B;
+    h1 {
+      margin: 0;
+      color: #fff;
+    }
+  }
+}
+.Game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 0 0 0;
+}

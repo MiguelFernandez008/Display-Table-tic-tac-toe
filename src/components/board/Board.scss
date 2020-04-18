@@ -1,0 +1,39 @@
+.board {
+    display: grid;
+    grid-template-rows: 200px 200px 200px;
+    grid-template-columns: 200px 200px 200px;
+    grid-gap: 30px;
+}
+
+.token {
+    font-family: 'Roboto', sans-serif;
+    background: #7A6F9B;
+    color: #fff;
+    -webkit-border-radius: 8px;
+    border-radius: 8px;
+    border: 1px solid #dadce0;
+    -webkit-box-shadow: 0 0 0 #fff, 0 0 0 #fff, 0 0 0 #fff;
+    box-shadow: 0 0 0 #fff, 0 0 0 #fff, 0 0 0 #fff;
+    cursor: pointer;
+    background-position: center center;
+    background-repeat: no-repeat;
+    &[data-player="1"] {
+        background-image: url('../../resources/circle.png');
+    }
+    &[data-player="2"] {
+        background-image: url('../../resources/cross.png');
+    }
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0 1px 4px rgba(0,0,0,.1), 0 2px 3px rgba(0,0,0,.12), 0 1px 3px rgba(0,0,0,.14);
+        -webkit-transform: translateY(-1px);
+        transform: translateY(-1px);
+    }
+}
+.Info {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    h2 {
+      color: #fff;
+    }
+  }
