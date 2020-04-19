@@ -61,7 +61,6 @@ export default class Board extends Component {
 
     render() {
         const tokens = [];
-        const overlay = null;
         for(let i = 1; i < 10; i++) {
             tokens.push(<button className="token" data-player="0" key={i} data-token={i} onClick={(event) => {this.jugarToken(event)}}></button>);
         }
