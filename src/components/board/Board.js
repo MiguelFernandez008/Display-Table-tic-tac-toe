@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Overlay from '../overlay/Overlay'
 import './Board.scss';
 
 export default class Board extends Component {
@@ -49,8 +48,20 @@ export default class Board extends Component {
         return false;
     }
 
+    restartGame() {
+        const tokens = document.querySelectorAll('button.token');
+        for (const token of tokens) {
+            token.dataset.player = 0;
+        }
+        this.setState({ 
+            player: 1,
+            finished: false 
+        });
+    }
+
     render() {
         const tokens = [];
+        const overlay = null;
         for(let i = 1; i < 10; i++) {
             tokens.push(<button className="token" data-player="0" key={i} data-token={i} onClick={(event) => {this.jugarToken(event)}}></button>);
         }
@@ -64,7 +75,12 @@ export default class Board extends Component {
                         {tokens}
                     </div>
                 </div>
-                {this.state.finished ? <Overlay player={this.state.player} />: null}
+                {this.state.finished &&
+                   <div className="Overlay">
+                    <p>Felicidades player {this.state.player}, has ganado la partida</p>
+                    <button onClick={() => { this.restartGame() }}>Reiniciar juego</button>
+                    </div>
+                }
             </React.Fragment>
         );
     } 
